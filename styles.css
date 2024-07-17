@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.treatment-area {
+    position: relative;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.phase {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.phase.active {
+    opacity: 1;
+}
+
+.treatment-zone {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    background-color: rgba(179, 217, 255, 0.7);
+    border: 2px solid #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: opacity 0.5s;
+}
+
+.boost-zone {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    right: 35%;
+    bottom: 35%;
+    background-color: rgba(255, 179, 179, 0.7);
+    border: 2px solid #e24a4a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.phase-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.treatment-description {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#sequential .phase2 .treatment-zone.faded {
+    opacity: 0.3;
+}
+
+#integrated .treatment-zone {
+    background-color: rgba(179, 217, 255, 0.5);
+}
+
+#integrated .boost-zone {
+    background-color: rgba(255, 179, 179, 0.5);
+}
+
+.phase-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.phase-btn {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.phase-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.info-box {
+    background-color: #fff3cd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.radiation-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.easter-egg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.easter-egg .emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.easter-egg .message {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.author {
+    text-align: right;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .treatment-area {
+        height: 250px;
+    }
+
+    .phase-info {
+        font-size: 0.9em;
+    }
+
+    .info-box {
+        font-size: 0.9em;
+    }
+
+    .radiation-icon {
+        font-size: 20px;
+    }
+    
+    .easter-egg {
+        padding: 15px;
+    }
+    
+    .easter-egg .emoji {
+        font-size: 36px;
+    }
+    
+    .easter-egg .message {
+        font-size: 16px;
+    }
+}
