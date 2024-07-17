@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radioterapie: Secvențială vs. Boost Integrat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="card">
+            <div class="radiation-icon">☢️</div>
+            <div class="easter-egg">
+                <span class="emoji">😘</span>
+                <span class="message">Pentru Anto</span>
+            </div>
+            <h1>Radioterapie: Secvențială vs. Boost Integrat</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="sequential">Secvențială</button>
+                <button class="tab-btn" data-tab="integrated">Boost Integrat</button>
+            </div>
+            <div class="tab-content active" id="sequential">
+                <h3>Radioterapie Secvențială</h3>
+                <div class="treatment-area">
+                    <div class="phase phase1 active">
+                        <div class="treatment-zone">Zonă largă de tratament</div>
+                        <p class="phase-info">Faza 1: 45-50 Gy (5-6 săptămâni)</p>
+                    </div>
+                    <div class="phase phase2">
+                        <div class="treatment-zone faded">Zonă largă de tratament</div>
+                        <div class="boost-zone">Boost</div>
+                        <p class="phase-info">Faza 2: +10-16 Gy (1-2 săptămâni)</p>
+                    </div>
+                </div>
+                <div class="phase-buttons">
+                    <button class="phase-btn active" data-phase="phase1">Faza 1</button>
+                    <button class="phase-btn" data-phase="phase2">Faza 2 (Boost)</button>
+                </div>
+                <p class="treatment-description">Tratament în două faze separate, cu boost aplicat doar în a doua fază.</p>
+                <div class="info-box">
+                    <p><strong>Planificarea tratamentului:</strong> Implică imagistică CT/MRI, conturarea volumelor țintă și organelor la risc, și planificarea dozimetrică complexă.</p>
+                    <p><strong>Factori de selecție:</strong> Tipul și stadiul cancerului, localizarea tumorii, vârsta și starea generală a pacientului, protocoalele instituționale.</p>
+                    <p><strong>Efecte secundare potențiale:</strong> Oboseală, iritații ale pielii, efecte specifice zonei tratate (ex: xerostomie pentru cancere cap și gât).</p>
+                    <p><strong>Beneficii:</strong> Permite evaluarea răspunsului tumoral între faze, ajustarea planului de tratament dacă este necesar.</p>
+                </div>
+            </div>
+            <div class="tab-content" id="integrated">
+                <h3>Radioterapie cu Boost Integrat</h3>
+                <div class="treatment-area">
+                    <div class="phase phase1 active">
+                        <div class="treatment-zone">Zonă largă de tratament</div>
+                        <div class="boost-zone">Boost</div>
+                        <p class="phase-info">Tratament simultan: 45-50 Gy + 10-16 Gy boost (5-7 săptămâni)</p>
+                    </div>
+                </div>
+                <p class="treatment-description">Tratament combinat, cu boost aplicat simultan pe toată durata terapiei.</p>
+                <div class="info-box">
+                    <p><strong>Planificarea tratamentului:</strong> Necesită tehnici avansate de planificare și administrare (IMRT, VMAT) pentru a asigura distribuția optimă a dozei.</p>
+                    <p><strong>Factori de selecție:</strong> Tumori mai mici, localizări anatomice favorabile, pacienți cu prognostic bun, disponibilitatea tehnologiei necesare.</p>
+                    <p><strong>Efecte secundare potențiale:</strong> Similar cu radioterapia secvențială, dar cu potențial redus datorită duratei mai scurte de tratament.</p>
+                    <p><strong>Beneficii:</strong> Durata totală de tratament mai scurtă, potențial control tumoral îmbunătățit, posibilă reducere a efectelor secundare pe termen lung.</p>
+                </div>
+            </div>
+        </div>
+        <div class="author">Creat de Dr. Bacalu Victor</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
