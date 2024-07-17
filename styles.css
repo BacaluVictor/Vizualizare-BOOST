@@ -16,15 +16,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     box-sizing: border-box;
     position: relative;
 }
 
-h1 {
+h1, h2, h3, h4 {
     text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
 }
 
 .tabs {
@@ -124,42 +122,29 @@ h1 {
     font-weight: bold;
 }
 
+.time-slider-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.time-slider {
+    width: 80%;
+    max-width: 300px;
+}
+
+.treatment-explanation {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    min-height: 60px;
+}
+
 .treatment-description {
     text-align: center;
     margin: 10px 0;
     font-style: italic;
-}
-
-#sequential .phase2 .treatment-zone.faded {
-    opacity: 0.3;
-}
-
-#integrated .treatment-zone {
-    background-color: rgba(179, 217, 255, 0.5);
-}
-
-#integrated .boost-zone {
-    background-color: rgba(255, 179, 179, 0.5);
-}
-
-.phase-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.phase-btn {
-    margin: 0 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.phase-btn.active {
-    background-color: #007bff;
-    color: white;
 }
 
 .info-box {
@@ -167,15 +152,6 @@ h1 {
     border-radius: 4px;
     padding: 10px;
     margin-top: 20px;
-}
-
-.info-box h4 {
-    margin-top: 0;
-}
-
-.info-box ul {
-    padding-left: 20px;
-    margin-bottom: 0;
 }
 
 .radiation-icon {
@@ -219,13 +195,22 @@ h1 {
     margin-top: 10px;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+.comparison-container {
+    max-width: 100%;
+}
 
+.treatment-comparison {
+    display: flex;
+    justify-content: space-between;
+}
+
+.treatment-column {
+    width: 48%;
+}
+
+@media (max-width: 768px) {
     .card {
-        padding: 15px;
+        padding: 10px;
     }
 
     h1 {
@@ -233,30 +218,68 @@ h1 {
     }
 
     .treatment-area {
-        height: 250px;
+        height: 200px;
     }
 
-    .phase-info {
+    .time-slider-container {
+        margin-top: 10px;
+    }
+
+    .time-slider {
+        width: 100%;
+        max-width: none;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity .2s;
+    }
+
+    .time-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .time-slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .treatment-explanation {
         font-size: 0.8em;
     }
 
-    .info-box {
-        font-size: 0.9em;
+    canvas {
+        max-width: 100%;
+        height: auto !important;
     }
 
-    .radiation-icon {
-        font-size: 20px;
+    .treatment-comparison {
+        flex-direction: column;
     }
     
-    .easter-egg {
-        padding: 15px;
+    .treatment-column {
+        width: 100%;
+        margin-bottom: 20px;
     }
-    
-    .easter-egg .emoji {
-        font-size: 36px;
-    }
-    
-    .easter-egg .message {
-        font-size: 16px;
-    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.active-treatment {
+    animation: pulse 2s infinite;
 }
